@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Simple Image Slider</title>
+
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('#slideShim').cycle({ 
+			fx:     'fade',
+			speed:  1500,
+			timeout: 4000,
+			prev:   '#back',
+			next:   '#forward',
+			pause:  1,
+			pager:  '#pager'
+		});
+
+});
+</script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<!-- Beginning of the slider markup -->
+	<div id="metaContainer">
+	
+		<div class="whatsHot"></div>
+	
+		<div class="backLink"><a href="#" title="Back" id="back">Back</a></div>
+		
+		<!-- The sliderr works with virtually any HTML element (div, span etc) but for the sake of simplicity I have used images in this demo -->
+		<div id="slideContainer">
+			<div id="slideShim">
+				<a href="#"><img src="slides/slide-one.png" alt="Slide One" /></a>
+				<a href="#"><img src="slides/slide-two.png" alt="Slide Two" /></a>
+				<a href="http://www.premiumpixels.com"><img src="slides/slide-three.png" alt="Premum Pixels" /></a>
+			</div>
+		</div>
+		
+		<div class="forwardLink"><a href="#" title="Forward" id="forward">Forward</a></div>
+		
+		<div id="pager" class="clear"></div>
+	</div>
+	<!-- End of the slider markup -->
+	
+	<p class="credit">HTML/CSS/JS by <a href="http://www.joepettersson.com">Joe Pettersson</a> based on a design by <a href="http://www.premiumpixels.com/clean-simple-image-slider-psd/">Orman Clark</a></p>
+		
+</div>
+
+</body>
+</html>
